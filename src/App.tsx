@@ -4,15 +4,13 @@ import './App.css';
 import Button from './components/Button'
 import Input from './components/Input'
 
-function onClick() {
-  alert('button clicked')
-}
-
-function onChange() {
-  alert('input changed')
-}
-
 export default class App extends React.Component<{}> {
+  onClick() {
+    alert('button clicked')
+  }
+  onChange() {
+    alert('input changed')
+  }
   render(){
     return (
       <div className="App">
@@ -20,8 +18,8 @@ export default class App extends React.Component<{}> {
           <img src={logo} className="App-logo" alt="logo" />
 
           <div className='App-inputs'>
-            <Input placeholder='Type something' onChange={onChange}/>
-            <Button onClick={onClick} text='Send'/>
+            <Input placeholder='Type something' onChange={this.onChange}/>
+            <Button onClick={this.onClick} text='Send'/>
           </div>
         </header>
       </div>
