@@ -22,10 +22,10 @@ const Slider = ({ images }: SliderProps) => {
         <img className="img" src={images[activeSlide]} alt="$" />
       </div>
       <div className="slider-controls">
-        <button className="btn btn-next" onClick={handlePrevSlide}>
+        <button className="btn" onClick={handlePrevSlide}>
           Prev
         </button>
-        <button className="btn btn-prev" onClick={handleNextSlide}>
+        <button className="btn" onClick={handleNextSlide}>
           Next
         </button>
       </div>

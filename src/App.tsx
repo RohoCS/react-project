@@ -8,9 +8,6 @@ import Slider from "./components/slider/slider";
 const imgArr = [logo, vite];
 
 const App: React.FC<{}> = () => {
-  const onChange = (): void => {
-    alert("input changed");
-  };
   return (
     <div className="App">
       <header className="App-header">
