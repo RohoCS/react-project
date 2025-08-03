@@ -1,28 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Button from './components/Button'
-import Input from './components/Input'
+import React from "react";
+import logo from "./logo.svg";
+import vite from "./Vitejs-logo.svg";
+import "./App.css";
+import Input from "./components/inputs/Input";
+import Slider from "./components/slider/slider";
 
-export default class App extends React.Component<{}> {
-  onClick() {
-    alert('button clicked')
-  }
-  onChange() {
-    alert('input changed')
-  }
-  render(){
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+const imgArr = [logo, vite];
 
-          <div className='App-inputs'>
-            <Input placeholder='Type something' onChange={this.onChange}/>
-            <Button onClick={this.onClick} text='Send'/>
-          </div>
-        </header>
-      </div>
-    );
-  }
-}
+const App: React.FC<{}> = () => {
+  const onChange = (): void => {
+    alert("input changed");
+  };
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Slider images={imgArr}></Slider>
+
+        <div className="App-inputs">
+          <Input placeholder="Type something" />
+        </div>
+      </header>
+    </div>
+  );
+};
+
+export default App;
